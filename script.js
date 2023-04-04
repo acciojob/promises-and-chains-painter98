@@ -9,5 +9,9 @@ function execute(){
 			else reject(`Oh sorry ${name}. You aren't old enough.`);
 		},4000);
 	})
-	promise.then(data => {console.log(data)}).catch(data => {console.log(data)});
+	promise.then(data => {
+		document.getElementById('result').innerText=data;
+	}).catch(data => {
+		document.getElementById('result').innerText=data;
+	});
 }
